@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shawn Botha - Professional Portfolio</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  .icon {
+    transition: transform 0.3s ease;
+  }
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  .fade-in-section {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease;
+  }
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  header, section {
+    padding: 40px 0;
+  }
+  h1, h2, h3 {
+    color: #333;
+  }
+  p, li {
+    color: #666;
+    line-height: 1.6;
+  }
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header Section -->
+  <header>
+    <h1>Shawn Botha</h1>
+    <p><a href="https://www.linkedin.com/in/shawn-botha/" target="_blank">LinkedIn</a> | +27 79 970 7556 | <a href="mailto:shawnbotha@gmail.com">shawnbotha@gmail.com</a></p>
+    <p>Service Delivery Manager | ICT Manager | Project Manager | Scrum Master | IT Specialist</p>
+  </header>
+
+  <!-- Skill Sets Section -->
+  <section id="skills">
+    <h2>Skill Sets</h2>
+    <ul>
+      <li>Agile Scrum Management</li>
+      <li>Agile Project Management</li>
+      <li>Leadership Skills</li>
+      <!-- Add more skills as needed -->
+    </ul>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in-section">
+    <h2>About Me</h2>
+    <p>I'm a highly skilled and accomplished IT professional with a track record of success in managing and leading complex projects...</p>
+    <!-- Add more about content as needed -->
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="fade-in-section">
+    <h2>Work Experience</h2>
+    <h3>Motovantage (FNB) Johannesburg</h3>
+    <p>Operations Project Manager | Jan 2022 - present</p>
+    <!-- Add more experience content as needed -->
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="fade-in-section">
+    <h2>Education</h2>
+    <p>Torque-IT</p>
+    <ul>
+      <li>VMware DCV</li>
+      <li>Symantec certified specialist</li>
+      <!-- Add more education as needed -->
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in-section">
+    <h2>Contact</h2>
+    <p>Feel free to reach out for professional inquiries or to connect!</p>
+    <p>+27 79 970 7556 | <a href="mailto:shawnbotha@gmail.com">shawnbotha@gmail.com</a></p>
+  </section>
+</div>
+
+<script>
+  // Listen for scroll events on the window
+  window.addEventListener('scroll', () => {
+    // Select all sections with the class 'fade-in-section'
+    document.querySelectorAll('.fade-in-section').forEach(section => {
+      // Get the position of the section relative to the viewport
+      const sectionTop = section.getBoundingClientRect().top;
+      // Get the height of the viewport
+      const viewportHeight = window.innerHeight;
+
+      // If the top of the section is within the viewport, add the 'visible' class
+      if (sectionTop < viewportHeight - 150) {
+        section.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
